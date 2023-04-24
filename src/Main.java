@@ -1,21 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car();
-        Car car2 = new Car();
+        Car car = new Car("Jeep",6);
+        Car car2 = new Car("Tesla", 8);
+
         car.setModelName("car1");
         car2.setModelName("car2");
         car.setWheelsCount(4);
         car2.setWheelsCount(4);
 
-        Truck truck = new Truck();
-        Truck truck2 = new Truck();
+
+        Truck truck = new Truck("Ford", 3);
+        Truck truck2 = new Truck("Toyota", 5);
         truck.setModelName("truck1");
         truck2.setModelName("truck2");
         truck.setWheelsCount(6);
         truck2.setWheelsCount(8);
 
-        Bicycle bicycle = new Bicycle();
-        Bicycle bicycle2 = new Bicycle();
+        Bicycle bicycle = new Bicycle("BMX", 3);
+        Bicycle bicycle2 = new Bicycle("GT", 4);
         bicycle.setModelName("bicycle1");
         bicycle2.setModelName("bicycle2");
         bicycle.setWheelsCount(2);
@@ -30,3 +32,4 @@ public class Main {
         station.check(null, null, truck2);
     }
 }
+
