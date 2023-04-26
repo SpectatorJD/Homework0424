@@ -1,33 +1,10 @@
-public class Vehicle {
-    private String modelName;
-    private int wheelsCount;
+public interface Vehicle {
 
-    public Vehicle(String modelName, int wheelsCount) {
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
-    }
+    public void check();
 
-    public String getModelName() {
-        return modelName;
-    }
+    void check(Bicycle bicycle);
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
+    void check(Truck truck);
 
-    public int getWheelsCount() {
-        return wheelsCount;
-    }
-
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
-
-    @Override
-    public String toString() {
-        return "Vehicle{" +
-                "modelName='" + modelName + '\'' +
-                ", wheelsCount=" + wheelsCount +
-                '}';
-    }
+    void check(Car car);
 }

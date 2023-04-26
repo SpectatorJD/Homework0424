@@ -1,35 +1,35 @@
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car("Jeep",6);
-        Car car2 = new Car("Tesla", 8);
-
-        car.setModelName("car1");
-        car2.setModelName("car2");
+        Car car = new Car();
+        Car car2 = new Car();
+        car.setModelName ("car1");
+        car.setModelName ("car2");
         car.setWheelsCount(4);
         car2.setWheelsCount(4);
+        car.check();
+        car2.check();
 
-
-        Truck truck = new Truck("Ford", 3);
-        Truck truck2 = new Truck("Toyota", 5);
+        Truck truck = new Truck();
+        Truck truck2 = new Truck();
         truck.setModelName("truck1");
         truck2.setModelName("truck2");
         truck.setWheelsCount(6);
         truck2.setWheelsCount(8);
+        truck.check();
+        truck2.check();
 
-        Bicycle bicycle = new Bicycle("BMX", 3);
-        Bicycle bicycle2 = new Bicycle("GT", 4);
+
+
+        Bicycle bicycle = new Bicycle();
+        Bicycle bicycle2 = new Bicycle();
         bicycle.setModelName("bicycle1");
-        bicycle2.setModelName("bicycle2");
+        bicycle.setModelName("bicycle2");
         bicycle.setWheelsCount(2);
         bicycle2.setWheelsCount(2);
+        bicycle.check();
+        bicycle2.check();
 
-        ServiceStation station = new ServiceStation();
-        station.check(car, null, null);
-        station.check(car2, null, null);
-        station.check(null, bicycle, null);
-        station.check(null, bicycle2, null);
-        station.check(null, null, truck);
-        station.check(null, null, truck2);
+
+
     }
 }
-
