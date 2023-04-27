@@ -1,12 +1,18 @@
-public  class Bicycle implements Vehicle {
+public class Bicycle implements ServiceStation {
+
+
     private String modelName;
     private int wheelsCount;
-
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
 
+
+    public Bicycle(String modelName, int wheelsCount) {
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
+    }
 
     public String getModelName() {
         return modelName;
@@ -23,29 +29,18 @@ public  class Bicycle implements Vehicle {
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
-
-
     @Override
     public void check() {
-
-    }
-
-    @Override
-    public void check(Bicycle bicycle) {
-        System.out.println("Обслуживаем " + bicycle.getModelName());
-        for (int i = 0; i < bicycle.getWheelsCount(); i++) {
-            bicycle.updateTyre();
+        System.out.println("Обслуживаем " + modelName);
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
         }
-
     }
-
     @Override
-    public void check(Truck truck) {
-
-    }
-
-    @Override
-    public void check(Car car) {
-
+    public String toString() {
+        return "Bicycle{" +
+                "modelName='" + modelName + '\'' +
+                ", wheelsCount=" + wheelsCount +
+                '}';
     }
 }

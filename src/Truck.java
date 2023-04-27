@@ -1,6 +1,12 @@
-public  class Truck  implements Vehicle {
+public class Truck implements ServiceStation {
+
     private String modelName;
     private int wheelsCount;
+
+    public Truck(String modelName, int wheelsCount) {
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
+    }
 
     public void updateTyre() {
         System.out.println("Меняем покрышку");
@@ -13,6 +19,8 @@ public  class Truck  implements Vehicle {
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }
+
+
 
     public String getModelName() {
         return modelName;
@@ -29,30 +37,21 @@ public  class Truck  implements Vehicle {
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
-
     @Override
     public void check() {
-
-    }
-
-    @Override
-    public void check(Bicycle bicycle) {
-
-    }
-
-    @Override
-    public void check(Truck truck) {
-        System.out.println("Обслуживаем " + truck.getModelName());
-        for (int i = 0; i < truck.getWheelsCount(); i++) {
-            truck.updateTyre();
+        System.out.println("Обслуживаем " + modelName);
+        checkEngine();
+        checkTrailer();
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
         }
-        truck.checkEngine();
-        truck.checkTrailer();
-
     }
 
     @Override
-    public void check(Car car) {
-
+    public String toString() {
+        return "Truck{" +
+                "modelName='" + modelName + '\'' +
+                ", wheelsCount=" + wheelsCount +
+                '}';
     }
 }
