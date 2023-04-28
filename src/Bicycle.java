@@ -1,4 +1,4 @@
-public class Bicycle implements ServiceStation {
+public class Bicycle implements Transport {
 
 
     private String modelName;

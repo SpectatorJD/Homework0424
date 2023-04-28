@@ -1,4 +1,4 @@
-public class Car implements ServiceStation {
+public class Car implements Transport {
     private String modelName;
     private int wheelsCount;
 
